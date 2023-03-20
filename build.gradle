@@ -1,26 +1,7 @@
-buildscript {
-    ext {
-        KOTLIN_VERSION = "1.6.10"
-        KETHEREUM_VERSION = "0.85.6"
-    }
-
-    repositories {
-        gradlePluginPortal()
-    }
-
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}"
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.40.0'
-    }
-}
-
-subprojects {
-    apply plugin: "kotlin"
-
-    repositories {
-        mavenCentral()
-        maven { url 'https://jitpack.io' }
-    }
-}
-
-apply plugin: "com.github.ben-manes.versions"
+curl --location --request POST 'https://managed.mypinata.cloud/api/v1/auth/content/jwt' \
+--header 'x-api-key: SUBMARINE KEY' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "timeoutSeconds": 3600,
+    "contentIds": ["95c904a0-4d61-4598-a4c8-fb5f0793c7ab"]
+}'
